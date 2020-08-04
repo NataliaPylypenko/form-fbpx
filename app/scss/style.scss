@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.overlay {
+  max-width: 622px;
+  height: auto;
+  margin: 30px auto;
+  padding: 43px 40px;
+  border: 1px solid #000000;
+  border-bottom: hidden;
+  background: url(../img/bg.png) repeat;
+
+  .form-border {
+    padding: 10px;
+    border-radius: 12px;
+    background: repeating-linear-gradient(135deg, #ee2553, #ee2553 13px, #fff 13px, #fff 22px, #58a6d7 22px, #58a6d7 35px, #fff 35px, #fff 44px);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 42px 35px 24px;
+
+      .form-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .form-auth {
+          width: 160px;
+          display: flex;
+          flex-direction: column;
+        }
+        .form-message {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .form-submit {
+        margin-left: auto;
+        border: none;
+        padding: 7px 24px;
+        border-radius: 24px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #ee2553;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.form-item {
+  margin-bottom: 26px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  .form-label {
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //font-weight: 500;
+    //font-size: 14px;
+    //color: #044e7b;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #044e7b;
+  }
+  .form-input:focus~.form-label,
+  .form-input:not(:focus):valid~.form-label {
+    opacity: 0;
+  }
+
+  .form-input, .form-textarea {
+    padding: 0 0 10px;
+    height: 25px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .form-input {
+    transition: border-bottom 0.2s ease-in;
+  }
+  .form-input:focus {
+    outline: none;
+    border-bottom: 1px solid #044e7b;
+  }
+
+  .form-textarea {
+    height: 135px;
+    width: 250px;
+    background: repeating-linear-gradient(to bottom, #fff, #fff 26px, #dcdcdc 26px, #dcdcdc 27px, #fff 27px, #fff 53px);
+    resize: none;
+    border: none;
+    margin-bottom: 26px;
+    transition: background 0.2s ease-in;
+  }
+  .form-textarea:focus {
+    outline: none;
+    background: repeating-linear-gradient(to bottom, #fff, #fff 26px, #044e7b 26px, #044e7b 27px, #fff 27px, #fff 53px);
+  }
+
+  textarea::-webkit-input-placeholder {
+    color: #044e7b;
+  }
+  textarea::-moz-placeholder {
+    color: #044e7b;
+  }
+}
+
+
